@@ -70,9 +70,9 @@
                         <a class="nav-link page-scroll" href="productServices.html">PRODUCTS & SERVICES</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle page-scroll" href="about-us.html" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT</a>
+                        <a class="nav-link dropdown-toggle page-scroll" href="about-us.php" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="about-us.html"><span class="item-text">ABOUT US</span></a>
+                            <a class="dropdown-item" href="about-us.php"><span class="item-text">ABOUT US</span></a>
                             <div class="dropdown-items-divide-hr"></div>
                             <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
                         </div>

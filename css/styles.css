@@ -777,7 +777,7 @@ input[type='checkbox'] {
 /*     03. Navigation     */
 /**************************/
 .navbar-custom {
-	background-color: #7cc7e2;
+	background-color: #fff;
 	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
 	font: 700 0.875rem/0.875rem "Open Sans", sans-serif;
 	transition: all 0.2s;
@@ -788,8 +788,8 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .navbar-brand.logo-image img {
-    width: 9rem;
-	height: 6rem;
+    width: 10rem;
+	height: 3rem;
 }
 
 .navbar-custom .navbar-brand.logo-text {
@@ -805,7 +805,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link {
 	padding: 0.625rem 0.75rem 0.625rem 0.75rem;
-	color: #FFFFFF;
+	color: #1381AA;
 	opacity: 0.8;
 	text-decoration: none;
 	transition: all 0.2s ease;
@@ -813,7 +813,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link:hover,
 .navbar-custom .nav-item .nav-link.active {
-	color: #FFFFFF;
+	color: #1381AA;
 	opacity: 1;
 }
 
@@ -846,7 +846,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item {
-	color: #64b8d6;
+	color: #1381AA;
 	opacity: 0.8;
 	font: 700 0.875rem/0.875rem "Open Sans", sans-serif;
 	text-decoration: none;
@@ -854,7 +854,7 @@ input[type='checkbox'] {
 
 .navbar-custom .dropdown-item:hover {
 	background-color: #FFFFFF;
-	color: #64b8d6;
+	color: #1381AA;
 	opacity: 1;
 }
 
@@ -884,7 +884,7 @@ input[type='checkbox'] {
 .navbar-custom .navbar-toggler {
 	padding: 0;
 	border: none;
-	color: #fff;
+	color: #1381aa;
 	font-size: 2rem;
 }
 
@@ -1912,8 +1912,8 @@ a:hover.back-to-top {
 	
 	/* Navigation */
 	.navbar-custom {
-		padding: 2.125rem 1.5rem 2.125rem 2rem;
-        background: transparent;
+		padding: 0.5rem 1.5rem 0.4rem 2rem;
+        background: white;
 		box-shadow: none;
 	}
 
@@ -1932,14 +1932,14 @@ a:hover.back-to-top {
 	}
 
 	.navbar-custom.top-nav-collapse {
-        padding: 0.5rem 1.5rem 0.5rem 2rem;
-		background-color: #7cc7e2;
+        padding: 0.28rem 1.5rem 0.5rem 2rem;
+		background-color: #fff;
 		box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
 	}
 
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
 	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
-		color: #fff;
+		color: #1381AA;
 	}
 
 	.navbar-custom .dropdown-menu {

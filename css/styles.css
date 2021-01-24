@@ -1811,6 +1811,12 @@ a:hover.back-to-top {
 		align-items: center;
 		display: flex;
 	}
+
+	.tabs .nav-tabs {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 2.75rem;
+	} 
 }
 
 

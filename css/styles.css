@@ -159,6 +159,10 @@ p.form-message.success, p.form-message.error {
 span.wave {
 	color: #1381aa;
 }
+
+.container.contact-us {
+	margin-top: 6rem;
+}
 body,
 html {
     width: 100%;
@@ -1199,7 +1203,7 @@ input[type='checkbox'] {
 /***********************/
 .basic-1 {
 	padding-top: 7.5rem;
-	padding-bottom: 8rem;
+	padding-bottom: 5rem;
 }
 
 .basic-1 .text-container {
@@ -1801,6 +1805,12 @@ a:hover.back-to-top {
 	.gmap_canvas {
 		padding-bottom: 40px;
 	}
+
+	.basic-1 .image-container {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
 }
 
 
@@ -1882,6 +1892,10 @@ a:hover.back-to-top {
 	.ex-header {
 		padding-top: 11rem;
 		padding-bottom: 9rem;
+	}
+
+	.ex-header.product{
+		margin-bottom: 4rem;
 	}
 
 	.ex-basic-2 .text-container.dark {
@@ -2072,7 +2086,7 @@ a:hover.back-to-top {
 
 	/* Details */
 	.basic-1 {
-		padding-top: 8rem;
+		padding-top: 1.5rem;
 	}
 
 	.basic-1 .text-container {
@@ -2249,6 +2263,9 @@ a:hover.back-to-top {
 	.basic-1 .image-container {
 		margin-right: 1rem;
 		margin-left: 1.5rem;
+		justify-content: center;
+		align-items: center;
+		display: flex;
 	}
 	
 	.basic-1 .text-container {

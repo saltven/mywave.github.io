@@ -17,7 +17,7 @@ if(isset($_POST['name']) && isset($_POST['email'])){
     $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = true;
     $mail->Username = "biz.merfy@gmail.com";
-    $mail->Password = 'sjjakwgihrskllem';
+    $mail->Password = 'yasin123';
     $mail->Port = 465;
     $mail->SMTPSecure = "ssl";
 

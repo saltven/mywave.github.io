@@ -393,17 +393,17 @@
 		$(this).blur();
     });
     
-    // $("#contactForm").validator().on("submit", function(event) {
-    // 	if (event.isDefaultPrevented()) {
-    //         // handle the invalid form...
-    //         cformError();
-    //         csubmitMSG(false, "Please fill all fields!");
-    //     } else {
-    //         // everything looks good!
-    //         event.preventDefault();
-    //         csubmitForm();
-    //     }
-    // });
+    $("#contactForm").validator().on("submit", function(event) {
+    	if (event.isDefaultPrevented()) {
+            // handle the invalid form...
+            // cformError();
+            csubmitMSG(false, "Please fill all fields!");
+        } else {
+            // everything looks good!
+            event.preventDefault();
+            sendEmail();
+        }
+    });
 
     // // contact form
     // function csubmitForm() {
@@ -440,13 +440,44 @@
     //     });
 	// }
 
-    // function csubmitMSG(valid, msg) {
-    //     if (valid) {
-    //         var msgClasses = "h3 text-center tada animated";
-    //     } else {
-    //         var msgClasses = "h3 text-center";
+    function csubmitMSG(valid, msg) {
+        if (valid) {
+            var msgClasses = "h3 text-center tada animated";
+        } else {
+            var msgClasses = "h3 text-center";
+        }
+        $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
+    }
+    function sendEmail(){
+        var name = $("#name");
+        var email = $("#email");
+        var body = $("#body");
+
+        if(isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(body)){
+            $.ajax({
+                url: 'contactForm.php',
+                method: 'POST',
+                dataType: 'json',
+                data: {
+                    name: name.val(),
+                    email: email.val(),
+                    body: body.val()
+                }, success: function(response){
+                    $('#contactForm')[0].reset();
+                    $('.sent-notification').text("Message sent successfully!");
+                }
+            });
+        }
+    }
+    // function isNotEmpty(caller){
+    //     if(caller.val()==""){
+    //         caller.css('border','1px solid red');
+    //         return false;
     //     }
-    //     $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
+    //     else {
+    //         caller.css('border', '');
+    //         return true;
+    //     }
     // }
 
 })(jQuery);

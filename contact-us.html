@@ -207,21 +207,22 @@
             <div class="row justify-content-center" id="rare-contact">
                 <div class="col-lg-6">
                     <div class="contact-form pt-30">
-                        <form id="contactForm" data-toggle="validator" data-focus="false" action="contactForm.php" method="post">
+                        <h4 class="sent-notification"></h4>
+                        <form id="contactForm" data-toggle="validator" data-focus="false">
                             <div class="single-form">
-                                <input type="text" name="name" id="cname" placeholder="Name" required>
+                                <input type="text" name="name" id="name" placeholder="Name" required>
                                 <div class="help-block with-errors"></div>
                             </div> 
                             <div class="single-form">
-                                <input type="email" name="email" id="cemail" placeholder="Email" required>
+                                <input type="email" name="email" id="email" placeholder="Email" required>
                                 <div class="help-block with-errors"></div>
                             </div> 
                             <div class="single-form">
-                                <textarea name="message" id="cmessage" placeholder="Message" required></textarea>
+                                <textarea name="body" id="body" placeholder="Message" required></textarea>
                                 <div class="help-block with-errors"></div>
                             </div> 
                             <div class="single-form">
-                                <button class="main-btn" onclick="csubmitForm()" type="submit">Submit Message</button>
+                                <button class="main-btn" onclick="sendEmail()" type="submit">Submit Message</button>
                             </div> 
                             <div class="form-message">
                                 <div id="cmsgSubmit" class="h3 text-center hidden"></div>
@@ -333,9 +334,40 @@
     
     	
     <!-- Scripts -->
-    <script>
+    <script type="text/javascript">
+        function sendEmail(){
+            var name = $("#name");
+            var email = $("#email");
+            var body = $("#body");
 
+            if(isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(body)){
+                $.ajax({
+                    url: 'contactForm.php',
+                    method: 'POST',
+                    dataType: 'json',
+                    data: {
+                        name: name.val(),
+                        email: email.val(),
+                        body: body.val()
+                    }, success: function(response){
+                        $('#contactForm')[0].reset();
+                        $('.sent-notification').text("Message sent successfully!");
+                    }
+                });
+            }
+        }
+        function isNotEmpty(caller){
+            if(caller.val()==""){
+                caller.css('border','1px solid red');
+                return false;
+            }
+            else {
+                caller.css('border', '');
+                return true;
+            }
+        }
     </script>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->

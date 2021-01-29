@@ -210,23 +210,21 @@
                         <h4 class="sent-notification"></h4>
                         <form id="contactForm" data-toggle="validator" data-focus="false">
                             <div class="single-form">
-                                <input type="text" name="name" id="name" placeholder="Name" required>
+                                <input type="text" name="name" id="name" placeholder="Name" required data-error="Please enter your name">
                                 <div class="help-block with-errors"></div>
                             </div> 
                             <div class="single-form">
-                                <input type="email" name="email" id="email" placeholder="Email" required>
+                                <input type="email" name="email" id="email" placeholder="Email" required data-error="Please enter your email">
                                 <div class="help-block with-errors"></div>
                             </div> 
                             <div class="single-form">
-                                <textarea name="body" id="body" placeholder="Message" required></textarea>
+                                <textarea id="message" placeholder="Message" required data-error="Please enter your message"></textarea>
                                 <div class="help-block with-errors"></div>
                             </div> 
                             <div class="single-form">
-                                <button class="main-btn" onclick="sendEmail()" type="submit">Submit Message</button>
+                                <button class="main-btn" type="submit">Submit Message</button>
                             </div> 
-                            <div class="form-message">
-                                <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                            </div>
+                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
                         </form>
                     </div> 
                 </div>

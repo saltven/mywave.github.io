@@ -469,15 +469,15 @@
             });
         }
     }
-    // function isNotEmpty(caller){
-    //     if(caller.val()==""){
-    //         caller.css('border','1px solid red');
-    //         return false;
-    //     }
-    //     else {
-    //         caller.css('border', '');
-    //         return true;
-    //     }
-    // }
+    function isNotEmpty(caller){
+        if(caller.val()==""){
+            caller.css('border','1px solid red');
+            return false;
+        }
+        else {
+            caller.css('border', '');
+            return true;
+        }
+    }
 
 })(jQuery);

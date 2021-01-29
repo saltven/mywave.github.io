@@ -57,10 +57,10 @@ if (empty($_POST["email"])) {
     $email = $_POST["email"];
 }
 
-if (empty($_POST["message"])) {
+if (empty($_POST["body"])) {
     $errorMSG = "Message is required ";
 } else {
-    $message = $_POST["message"];
+    $message = $_POST["body"];
 }
 
 

@@ -493,12 +493,14 @@
         // Success and Error functions for after the form is submitted
         
         function success() {
-          form.reset();
-          status.innerHTML = "Message sent! You will be contacted shortly.";
+            form.reset();
+            status.classList.add('success');
+            status.innerHTML = "Message sent! You will be contacted shortly.";
         }
     
         function error() {
-          status.innerHTML = "Oops! There was a problem.";
+            status.classList.add('error');
+            status.innerHTML = "Oops! There was a problem.";
         }
     
         // handle the form submission event

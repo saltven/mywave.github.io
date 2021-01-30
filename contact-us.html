@@ -32,15 +32,12 @@
 	<!-- Favicon  -->
     <link rel="icon" href="">
     <script type="text/javascript">
-        var verifyCallback = function(response) {
-          alert(response);
-        };
+
         
         var onloadCallback = function() {
           
           grecaptcha.render('example3', {
             'sitekey' : '6LdnzEIaAAAAAGxnI6VJ3yoIiRT9haRvSW6gLPb5',
-            'callback' : verifyCallback,
             'theme' : 'light'
           });
         };

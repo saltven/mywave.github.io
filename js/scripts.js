@@ -529,11 +529,7 @@
         xhr.send(data);
       }
     
-      var onloadCallback = function() {
-        grecaptcha.render('google-captcha', {
-          'sitekey' : '6LdnzEIaAAAAAGxnI6VJ3yoIiRT9haRvSW6gLPb5'
-        });
-      };
+
 
 
 })(jQuery);

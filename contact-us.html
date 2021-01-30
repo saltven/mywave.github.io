@@ -19,7 +19,7 @@
 
     <!-- Website Title -->
     <title>About Us - MyWAVe</title>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+   
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -31,6 +31,21 @@
 	
 	<!-- Favicon  -->
     <link rel="icon" href="">
+    <script type="text/javascript">
+        var verifyCallback = function(response) {
+          alert(response);
+        };
+        
+        var onloadCallback = function() {
+          
+          grecaptcha.render('example3', {
+            'sitekey' : '6LdnzEIaAAAAAGxnI6VJ3yoIiRT9haRvSW6gLPb5',
+            'callback' : verifyCallback,
+            'theme' : 'light'
+          });
+        };
+      </script>
+  
 </head>
 <body data-spy="scroll" data-target=".fixed-top" style="overflow-x: hidden;">
     
@@ -209,7 +224,8 @@
                 <div class="col-lg-6">
                     <div class="contact-form pt-30">
                         <h4 class="sent-notification"></h4>
-                        <form action="https://formspree.io/f/mpzobvvn" method="POST" id="form-contact">
+                        <!-- <form action="https://formspree.io/f/mpzobvvn" method="POST" id="form-contact"> -->
+                            <form action="?" method="POST" id="form-contact"></form>
                             <div class="single-form">
                                 <input type="text" name="name" id="name" placeholder="Name" required data-error="Please enter your name">
                                 <div class="help-block with-errors"></div>
@@ -222,7 +238,9 @@
                                 <textarea name="messsage" id="message" placeholder="Message" required data-error="Please enter your message"></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="g-recaptcha-response" data-sitekey="6LdnzEIaAAAAAGxnI6VJ3yoIiRT9haRvSW6gLPb5"></div> 
+                            <div class="single-form">
+                                <div class="g-recaptcha-response" id="example3"></div> 
+                            </div>
                             <div class="single-form">
                                 <button class="main-btn" type="submit">Submit Message</button>
                             </div> 
@@ -338,6 +356,10 @@
     
     	
     <!-- Scripts -->
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->

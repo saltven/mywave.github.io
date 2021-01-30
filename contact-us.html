@@ -209,7 +209,7 @@
                     <div class="contact-form pt-30">
                         <h4 class="sent-notification"></h4>
                         <!-- <form id="contactForm" data-toggle="validator" data-focus="false"> -->
-                        <form action="https://formspree.io/f/mpzobvvn" method="POST">
+                        <form action="https://formspree.io/f/mpzobvvn" method="POST" id="form-contact">
                             <div class="single-form">
                                 <input type="text" name="name" id="name" placeholder="Name" required data-error="Please enter your name">
                                 <div class="help-block with-errors"></div>
@@ -226,8 +226,13 @@
                                 <button class="main-btn" type="submit">Submit Message</button>
                             </div> 
                             <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+                            
                         </form>
+                    </div>
+                    <div class="status-container">
+                        <div id="status"></div>
                     </div> 
+                    
                 </div>
             </div> 
         </div> 

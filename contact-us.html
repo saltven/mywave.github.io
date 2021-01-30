@@ -19,6 +19,7 @@
 
     <!-- Website Title -->
     <title>About Us - MyWAVe</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -208,7 +209,6 @@
                 <div class="col-lg-6">
                     <div class="contact-form pt-30">
                         <h4 class="sent-notification"></h4>
-                        <!-- <form id="contactForm" data-toggle="validator" data-focus="false"> -->
                         <form action="https://formspree.io/f/mpzobvvn" method="POST" id="form-contact">
                             <div class="single-form">
                                 <input type="text" name="name" id="name" placeholder="Name" required data-error="Please enter your name">
@@ -221,7 +221,8 @@
                             <div class="single-form">
                                 <textarea name="messsage" id="message" placeholder="Message" required data-error="Please enter your message"></textarea>
                                 <div class="help-block with-errors"></div>
-                            </div> 
+                            </div>
+                            <div class="g-recaptcha-response" data-sitekey="6LdnzEIaAAAAAGxnI6VJ3yoIiRT9haRvSW6gLPb5"></div> 
                             <div class="single-form">
                                 <button class="main-btn" type="submit">Submit Message</button>
                             </div> 
@@ -232,7 +233,6 @@
                     <div class="status-container">
                         <div id="status"></div>
                     </div> 
-                    
                 </div>
             </div> 
         </div> 
@@ -338,41 +338,6 @@
     
     	
     <!-- Scripts -->
-    
-    <!-- <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script> -->
-    <!-- <script type="text/javascript">
-        function sendEmail(){
-            var name = $("#name");
-            var email = $("#email");
-            var body = $("#body");
-
-            if(isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(body)){
-                $.ajax({
-                    url: 'contactForm.php',
-                    method: 'POST',
-                    dataType: 'json',
-                    data: {
-                        name: name.val(),
-                        email: email.val(),
-                        body: body.val()
-                    }, success: function(response){
-                        $('#contactForm')[0].reset();
-                        $('.sent-notification').text("Message sent successfully!");
-                    }
-                });
-            }
-        }
-        function isNotEmpty(caller){
-            if(caller.val()==""){
-                caller.css('border','1px solid red');
-                return false;
-            }
-            else {
-                caller.css('border', '');
-                return true;
-            }
-        }
-    </script> -->
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->

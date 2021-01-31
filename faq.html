@@ -18,7 +18,8 @@
 	<meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>About Us - MyWAVe</title>
+    <title>FAQ - MyWAVe</title>
+   
     
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
@@ -30,8 +31,48 @@
 	
 	<!-- Favicon  -->
     <link rel="icon" href="">
+    <style>
+        .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+        }
+
+        .active, .accordion:hover {
+        background-color: #ccc;
+        }
+
+        .accordion:after {
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+        }
+
+        .active:after {
+        content: "\2212";
+        }
+
+        .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        }
+    </style>
+    
+    
 </head>
-<body data-spy="scroll" data-target=".fixed-top" >
+<body data-spy="scroll" data-target=".fixed-top">
     
     <!-- Preloader -->
 	<div class="spinner-wrapper">
@@ -97,7 +138,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>About Us</h1>
+                    <h1>FAQ</h1>
                 </div> 
             </div> 
         </div> 
@@ -106,11 +147,11 @@
 
     
     <!-- Privacy Content -->
-    <div class="ex-basic-2">
+    <!-- <div class="ex-basic-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- <div class="image-container">
+                    <div class="image-container">
                         <div class="video-wrapper">
                             <a class="popup-youtube" href="https://scontent.fkul13-1.fna.fbcdn.net/v/t66.36240-6/10000000_792316224685018_8945397222955125711_n.mp4?_nc_cat=109&ccb=2&_nc_sid=985c63&efg=eyJ2ZW5jb2RlX3RhZyI6Im9lcF9oZCJ9&_nc_ohc=R_uz_Do5Hy8AX8pevAg&_nc_ht=scontent.fkul13-1.fna&oh=07dbbac5c23baa50cd0cd2d36c6ae3d9&oe=602DEE85" data-effect="fadeIn"></a>
                                 <img class="img-fluid" src="images/i-workshopbg.png" alt="alternative">
@@ -119,7 +160,7 @@
                                 </span>
                             </a>
                         </div> 
-                    </div>  -->
+                    </div> 
                     <div class="text-container">
                         <div class="section-title text-center pb-25">
                             <h1>Our Story</h1>
@@ -127,21 +168,21 @@
                         <br>
                         <p>iWorkshop Sdn Bhd 201401024952 (1101042-U), a company registered in Malaysia, is an automotive based solution technology and innovation firm. We define success as achieving exceptional results that have a lasting impact on businesses and industries.</p>
                         <p>iWorkshop’s strength is in its people and our team of Automotive Industry Professionals providing comprehensive expertise in all phases of Automotive Business & Corporate Strategy, Business Restructuring & Blueprint, Technology Development and Project Management. With a diverse range of practical experience, technical training and cultural backgrounds our team is guaranteed to provide maximum quality through the multiple phases of solution and system development.</p>
-                    </div> <!-- end of text-container-->
+                    </div> 
                     
 
                     <div class="text-container dark">
                         <p class="testimonial-text">We solve the challenges faced by our clients with seamless and end to end services and vigorously endorse business transformation.</p>
-                    </div> <!-- end of text container -->
+                    </div> 
 
                     <div class="text-container last">
                         <h3>Our tagline “Driving Digitalisation” focuses on critical aspect of bridging the digital gaps between people and technology, while ensuring rich user experience, workability, suitability and simplicity.</h3>
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col-->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of ex-basic-2 -->
-    <!-- end of privacy content -->
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div>  -->
+    
 
     <!-- <div class="cards-1">
         <div class="container">
@@ -194,6 +235,73 @@
             </div> 
         </div>
     </div> -->
+
+    <section id="contact" class="contact-area pt-125 pb-130 gray-bg" style="overflow-x: hidden;">
+        <div class="container contact-us">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center pb-25">
+                        <h2 class="title">Questions?</h2>
+                        <p>Possible answers to your questions down below. Check it out!</p>
+                    </div> 
+                </div>
+            </div> 
+        
+            </div> 
+            <div class="row justify-content-center" id="rare-contact">
+                <div class="col-lg-6">
+                    <button class="accordion">Who should use MyWAVe?</button>
+                    <div class="panel">
+                        <br>
+                        <p>MyWAVe is designed for small-medium automotive workshop owners. Equipped with all major modules such as Simple Work Order System (SWOS), Simple Customer Database System (SCDS) and Simple Account Management System (SAMS).</p>
+                        <p>MyWAVe System is ideal for you if you:</p>
+                        <ul>
+                            <li>Want to increase your business process efficiency.</li>
+                            <li>Want to be able to <b>manage</b> and <b>add customer information</b> anytime, anywhere.</li>
+                            <li>Wants to receive <b>detailed</b> reports of their daily sales and gross profit.</li>
+                        </ul>
+                        <br>
+                    </div>
+                    
+                    <button class="accordion">How cost-effective is MyWAVe?</button>
+                    <div class="panel">
+                        <br>
+                        <p>MyWAVe applications are available on both web-based and app-based. It does not require large systems expenditures for servers, complicated server installation, or other hardware and software. You do not have to hire an IT professional to maintain in-house systems. MyWAVe Team will take care of frequent MyWAVe system upgrades, maintenance, backup, storage, and security.</p>
+                        <br>
+                    </div>
+                    
+                    <button class="accordion">How do I purchase MyWAVe?</button>
+                    <div class="panel">
+                        <br>
+                        <p>You will need to pay for MyWAVe services on an annual subscription basis. There are no upfront software purchase fees. The cost of the hardware and infrastructure that hosts the software, the right to use the software, and all maintenance and support services are included in the subscription fee. Check out the prices here.</p>
+                        <br>
+                    </div> 
+
+                    <button class="accordion">How do we setup MyWAVe?</button>
+                    <div class="panel">
+                        <br>
+                        <p>As we have mentioned earlier, there is no need to set up a server, and your existing computers are already good enough to run MyWAVe. After signing-up here, we will help to pre-configure some basic settings so your system fulfils your business operation’s needs. We will set up user login ID, upload data, and provide reference guides. Should you have a question for our MyWAVe team, we will always be standing by to provide support.</p>
+                        <br>
+                    </div> 
+
+                    <button class="accordion">How can I be sure my data is secure?</button>
+                    <div class="panel">
+                        <br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, blanditiis eaque, voluptates accusantium quo rerum dolor iure quasi sint natus rem atque ut deleniti quod! Eum mollitia nemo perspiciatis aspernatur.</p>
+                        <br>
+                    </div> 
+
+                    <button class="accordion">I’m currently using another software product. Can my data get imported?</button>
+                    <div class="panel">
+                        <br>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, neque nam labore obcaecati magni illum doloremque harum alias quod repellendus omnis atque ex laboriosam, tempora impedit sequi corporis dignissimos laborum?</p>
+                        <br>
+                    </div> 
+                    <br>
+                </div>
+            </div> 
+        </div> 
+    </section>
 
     
     <!-- Newsletter -->
@@ -295,9 +403,26 @@
     
     	
     <!-- Scripts -->
-    <script>
+    <script type="text/javascript">
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+        });
+        }
     </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->

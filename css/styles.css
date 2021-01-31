@@ -40,6 +40,28 @@ Colors:
 	padding-top: 35px;
 } */
 
+
+/* Previous accordian */
+.accordian-item {
+	
+	background-color: #64b8d6;
+	border-radius: .4rem;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	box-shadow: .5rem 2px .5rem rgba(0, 0, 0,.1);
+}
+
+.accordian-link {
+	font-size: 1.2rem;
+	color: white;
+	text-decoration: none;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1.5rem;
+}
+
 .status-container {
 	margin: 0 auto;
 	justify-content: center;
@@ -47,6 +69,53 @@ Colors:
 	flex-direction: column;
 	display: flex;
 	margin-bottom: 1rem;
+	padding: 1rem 0;
+}
+
+.accordian-link ion-icon {
+	color: white;
+	padding: .5rem;
+}
+
+.accordian-link .ion-remove {
+	display: none;
+}
+
+.answer {
+	max-height: 0;
+	overflow: hidden;
+	position: relative;
+	background-color: #1381AA;
+	transition: max-height 650ms;
+}
+
+.answer::before {
+	content: "";
+	position: absolute;
+	width: .6rem;
+	height: 90%;
+	background-color: #8fc460;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+
+.answer p {
+	font-size: 1.2rem;
+	color: white;
+	padding: 2rem;
+}
+
+.accordian-item:target .answer {
+	max-height: 20rem;
+}
+
+.accordian-item:target .accordian-link .ion-add {
+	display: none;
+}
+
+.accordian-item:target .accordian-link .ion-remove {
+	display: block;
 }
 
 #status {
@@ -299,15 +368,6 @@ h6 {
 	padding-left: 1.25rem;
 }
 
-a {
-	color: #555;
-	text-decoration: underline;
-}
-
-a:hover {
-	color: #555;
-	text-decoration: underline;
-}
 
 a.white {
 	color: #fff;
@@ -921,13 +981,14 @@ input[type='checkbox'] {
 	margin-top: 0.25rem;
 	margin-bottom: 1.375rem;
 	margin-left: 0.5rem;
-	border: 0.125rem solid #fff;
-	color: #fff;
+	border: 0.125rem solid #1381aa;
+	background-color: #1381aa;
+	color: white;
 }
 
 .navbar-custom .nav-item .btn-outline-sm:hover {
-	background-color: #fff;
-	color: #0e0e0e;
+	background-color: white;
+	color: #1381aa;
 }
 
 .navbar-custom .navbar-toggler {

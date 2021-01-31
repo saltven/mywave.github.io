@@ -393,17 +393,17 @@
 		$(this).blur();
     });
     
-    $("#contactForm").validator().on("submit", function(event) {
-    	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            // cformError();
-            csubmitMSG(false, "Please fill all fields!");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            sendEmail();
-        }
-    });
+    // $("#contactForm").validator().on("submit", function(event) {
+    // 	if (event.isDefaultPrevented()) {
+    //         // handle the invalid form...
+    //         // cformError();
+    //         csubmitMSG(false, "Please fill all fields!");
+    //     } else {
+    //         // everything looks good!
+    //         event.preventDefault();
+    //         sendEmail();
+    //     }
+    // });
 
     // // contact form
     // function csubmitForm() {
@@ -440,94 +440,94 @@
     //     });
 	// }
 
-    function csubmitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h3 text-center tada animated";
-        } else {
-            var msgClasses = "h3 text-center";
-        }
-        $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-    }
-    function sendEmail(){
-        var name = $("#name");
-        var email = $("#email");
-        var body = $("#body");
+    // function csubmitMSG(valid, msg) {
+    //     if (valid) {
+    //         var msgClasses = "h3 text-center tada animated";
+    //     } else {
+    //         var msgClasses = "h3 text-center";
+    //     }
+    //     $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
+    // }
+    // function sendEmail(){
+    //     var name = $("#name");
+    //     var email = $("#email");
+    //     var body = $("#body");
 
-        if(isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(body)){
-            $.ajax({
-                url: 'contactForm.php',
-                method: 'POST',
-                dataType: 'json',
-                data: {
-                    name: name.val(),
-                    email: email.val(),
-                    body: body.val()
-                }, success: function(response){
-                    $('#contactForm')[0].reset();
-                    $('.sent-notification').text("Message sent successfully!");
-                }
-            });
-        }
-    }
-    function isNotEmpty(caller){
-        if(caller.val()==""){
-            caller.css('border','1px solid red');
-            return false;
-        }
-        else {
-            caller.css('border', '');
-            return true;
-        }
-    }
+    //     if(isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(body)){
+    //         $.ajax({
+    //             url: 'contactForm.php',
+    //             method: 'POST',
+    //             dataType: 'json',
+    //             data: {
+    //                 name: name.val(),
+    //                 email: email.val(),
+    //                 body: body.val()
+    //             }, success: function(response){
+    //                 $('#contactForm')[0].reset();
+    //                 $('.sent-notification').text("Message sent successfully!");
+    //             }
+    //         });
+    //     }
+    // }
+    // function isNotEmpty(caller){
+    //     if(caller.val()==""){
+    //         caller.css('border','1px solid red');
+    //         return false;
+    //     }
+    //     else {
+    //         caller.css('border', '');
+    //         return true;
+    //     }
+    // }
 
-    //formspree
+    // //formspree
 
-    window.addEventListener("DOMContentLoaded", function() {
+    // window.addEventListener("DOMContentLoaded", function() {
 
-        // get the form elements defined in your form HTML above
+    //     // get the form elements defined in your form HTML above
         
-        var form = document.getElementById("form-contact");
-        // var button = document.getElementById("my-form-button");
-        var status = document.getElementById("status");
+    //     var form = document.getElementById("form-contact");
+    //     // var button = document.getElementById("my-form-button");
+    //     var status = document.getElementById("status");
     
-        // Success and Error functions for after the form is submitted
+    //     // Success and Error functions for after the form is submitted
         
-        function success() {
-            form.reset();
-            status.classList.add('success');
-            status.innerHTML = "Message sent! You will be contacted shortly.";
-        }
+    //     function success() {
+    //         form.reset();
+    //         status.classList.add('success');
+    //         status.innerHTML = "Message sent! You will be contacted shortly.";
+    //     }
     
-        function error() {
-            status.classList.add('error');
-            status.innerHTML = "Oops! There was a problem.";
-        }
+    //     function error() {
+    //         status.classList.add('error');
+    //         status.innerHTML = "Oops! There was a problem.";
+    //     }
     
-        // handle the form submission event
+    //     // handle the form submission event
     
-        form.addEventListener("submit", function(ev) {
-          ev.preventDefault();
-          var data = new FormData(form);
-          ajax(form.method, form.action, data, success, error);
-        });
-      });
+    //     form.addEventListener("submit", function(ev) {
+    //       ev.preventDefault();
+    //       var data = new FormData(form);
+    //       ajax(form.method, form.action, data, success, error);
+    //     });
+    //   });
       
-      // helper function for sending an AJAX request
+    //   // helper function for sending an AJAX request
     
-      function ajax(method, url, data, success, error) {
-        var xhr = new XMLHttpRequest();
-        xhr.open(method, url);
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState !== XMLHttpRequest.DONE) return;
-          if (xhr.status === 200) {
-            success(xhr.response, xhr.responseType);
-          } else {
-            error(xhr.status, xhr.response, xhr.responseType);
-          }
-        };
-        xhr.send(data);
-      }
+    //   function ajax(method, url, data, success, error) {
+    //     var xhr = new XMLHttpRequest();
+    //     xhr.open(method, url);
+    //     xhr.setRequestHeader("Accept", "application/json");
+    //     xhr.onreadystatechange = function() {
+    //       if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    //       if (xhr.status === 200) {
+    //         success(xhr.response, xhr.responseType);
+    //       } else {
+    //         error(xhr.status, xhr.response, xhr.responseType);
+    //       }
+    //     };
+    //     xhr.send(data);
+    //   }
     
 
 

@@ -487,6 +487,7 @@
     //     // get the form elements defined in your form HTML above
         
         var form = document.getElementById("form-contact");
+        var form1 = document.getElementById("form-register");
     //     // var button = document.getElementById("my-form-button");
         var status = document.getElementById("status");
     
@@ -494,6 +495,7 @@
         
         function success() {
             form.reset();
+            form1.reset();
             status.classList.add('success');
             status.innerHTML = "Message sent! You will be contacted shortly.";
         }
@@ -510,8 +512,14 @@
             var data = new FormData(form);
             ajax(form.method, form.action, data, success, error);
         });
+        form1.addEventListener("submit", function(ev) {
+            ev.preventDefault();
+            var data = new FormData(form1);
+            ajax(form1.method, form1.action, data, success, error);
         });
-        
+    });
+    
+
     //   // helper function for sending an AJAX request
     
         function ajax(method, url, data, success, error) {

@@ -42,6 +42,7 @@ Colors:
 
 
 /* Previous accordian */
+
 html {
 	overflow-x: hidden;
 }
@@ -242,7 +243,7 @@ p.form-message.success, p.form-message.error {
 	transition: all 0.3s ease-out 0s;
 	background-color: #1381aa;
 	text-transform: uppercase; }
-	.main-btn:hover {
+	.main-btn:hover:enabled {
 		background-color: #fff;
 		color: #1381aa;
 		border-color: #1381aa; }
@@ -257,6 +258,11 @@ p.form-message.success, p.form-message.error {
 		background-color: #1381aa;
 		color: #fff;
 		border-color: #1381aa; }
+	.main-btn:disabled {
+		opacity: 20%;
+
+	}
+
 
 
 

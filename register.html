@@ -55,7 +55,15 @@
         }
 
         
-      </script>
+    </script>
+    <style>
+        .input-checkbox {
+            display: inline-block;
+            margin-right: 0.625rem;
+            min-height: 1.25rem;
+            min-width: 1.25rem;
+        }
+    </style>
   
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
@@ -172,8 +180,8 @@
                                 <div class="help-block with-errors"></div>
                             </div> 
                             <div class="single-form">
-                                <p>Postode:</p>
-                                <input type="number" name="Postcode" id="postcode" placeholder="Enter postcode" required data-error="Please enter your postcode">
+                                <p>Postcode:</p>
+                                <input type="text" name="Postcode" id="postcode" placeholder="Enter postcode" required data-error="Please enter your postcode">
                                 <div class="help-block with-errors"></div>
                             </div> 
                             <div class="single-form">
@@ -181,6 +189,21 @@
                                 <input type="text" name="State" id="state" placeholder="Enter state" required data-error="Please enter your postcode">
                                 <div class="help-block with-errors"></div>
                             </div>
+                            <br>
+                            <br>
+                            <h4>Service Category</h4>
+                            <br>
+                            <label><input name="Service Category" value="Vehicle repair, overhaul and maintenance" type="checkbox" class="input-checkbox"/>Vehicle repair, overhaul and maintenance</label>
+                            <br>
+                            <label><input name="Service Category" value="Tire dealer, repair and maintenance" type="checkbox" class="input-checkbox"/>Tire dealer, repair and maintenance</label>
+                            <br>
+                            <label><input name="Service Category" value="Aircond repair and maintenance" type="checkbox" class="input-checkbox"/>Aircond repair and maintenance</label>
+                            <br>
+                            <label><input name="Service Category" value="Motorcycle repair, overhaul, and maintenance" type="checkbox" class="input-checkbox"/>Motorcycle repair, overhaul, and maintenance</label>
+                            <br>
+                            <label><input name="Service Category" value="Body repair and refurbishment" type="checkbox" class="input-checkbox"/>Body repair and refurbishment</label>
+                            <br>
+                            <label><input name="Service Category" value="Vehicle inspections" type="checkbox" class="input-checkbox"/>Vehicle inspections</label>
                             <br>
                             <br>
                             <h4>Contact Person 1</h4>
@@ -191,7 +214,7 @@
                             </div> 
                             <div class="single-form">
                                 <p>Mobile number:</p>
-                                <input type="number" name="Mobile number 1" id="mobile-number" placeholder="E.g. 0123456789" required data-error="Please enter your mobile number">
+                                <input type="text" name="Mobile number 1" id="mobile-number" placeholder="E.g. 0123456789" required data-error="Please enter your mobile number">
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="single-form">
@@ -209,7 +232,7 @@
                             </div> 
                             <div class="single-form">
                                 <p>Mobile number:</p>
-                                <input type="number" name="Mobile number 2" id="mobile-number" placeholder="E.g. 0123456789" required data-error="Please enter your mobile number">
+                                <input type="text" name="Mobile number 2" id="mobile-number" placeholder="E.g. 0123456789" required data-error="Please enter your mobile number">
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="single-form">

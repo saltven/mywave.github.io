@@ -410,6 +410,13 @@ a.white {
 	transition: all 0.2s;
 }
 
+.btn-solid-reg.cmg-soon:disabled{
+	opacity: 20%;
+	background-color: #1381aa;
+	color: #fff;
+	border-color: #1381aa
+}
+
 .btn-solid-reg:hover {
 	background-color: transparent;
 	color: #1381aa;

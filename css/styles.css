@@ -1006,6 +1006,11 @@ input[type='checkbox'] {
 	color: white;
 }
 
+.btn-outline-sm#login{
+	background-color: white;
+	color: #1381aa;
+}
+
 .navbar-custom .nav-item .btn-outline-sm:hover {
 	background-color: white;
 	color: #1381aa;

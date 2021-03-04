@@ -207,7 +207,8 @@ body {
 	padding-bottom: 20px; }
 	@media (max-width: 767px) {
 	  .section-title .title {
-		font-size: 30px; } }
+		font-size: 30px;
+		margin-top: 3rem; } }
 
 p.form-message.success, p.form-message.error {
 	font-size: 16px;
@@ -2399,7 +2400,7 @@ a:hover.back-to-top {
 	/* Details */
 	.basic-1 .image-container {
 		margin-right: 1rem;
-		margin-left: 1.5rem;
+		margin-left: 7.5rem;
 		justify-content: center;
 		align-items: center;
 		display: flex;
@@ -2407,8 +2408,8 @@ a:hover.back-to-top {
 	
 	.basic-1 .text-container {
 		margin-top: 1rem;
-		margin-right: 1.5rem;
-		margin-left: 1rem;
+		margin-right: -6.5rem;
+		margin-left: 4rem;
 	}
 
 	.basic-1 h2 {

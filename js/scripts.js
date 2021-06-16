@@ -3,8 +3,7 @@
 
 (function($) {
     "use strict"; 
-	
-	/* Preloader */
+
 	$(window).on('load', function() {
 		var preloaderFadeOutTime = 500;
 		function hidePreloader() {
@@ -16,9 +15,7 @@
 		hidePreloader();
 	});
 
-	
-	/* Navbar Scripts */
-	// jQuery to collapse the navbar on scroll
+
     $(window).on('scroll load', function() {
 		if ($(".navbar").offset().top > 60) {
 			$(".fixed-top").addClass("top-nav-collapse");
@@ -27,7 +24,6 @@
 		}
     });
 
-	// jQuery for page scrolling feature - requires jQuery Easing plugin
 	$(function() {
 		$(document).on('click', 'a.page-scroll', function(event) {
 			var $anchor = $(this);
@@ -38,14 +34,11 @@
 		});
 	});
 
-    // closes the responsive menu on menu item click
     $(".navbar-nav li a").on("click", function(event) {
     if (!$(this).parent().hasClass('dropdown'))
         $(".navbar-collapse").collapse('hide');
     });
 
-
-    /* Image Slider - Swiper */
     var imageSlider = new Swiper('.image-slider', {
         autoplay: {
             delay: 2000,
@@ -55,22 +48,18 @@
         spaceBetween: 30,
         slidesPerView: 5,
 		breakpoints: {
-            // when window is <= 580px
             580: {
                 slidesPerView: 1,
                 spaceBetween: 10
             },
-            // when window is <= 768px
             768: {
                 slidesPerView: 2,
                 spaceBetween: 20
             },
-            // when window is <= 992px
             992: {
                 slidesPerView: 3,
                 spaceBetween: 20
             },
-            // when window is <= 1200px
             1200: {
                 slidesPerView: 4,
                 spaceBetween: 20
@@ -79,8 +68,6 @@
         }
     });
 
-
-    /* Text Slider - Swiper */
 	var textSlider = new Swiper('.text-slider', {
         autoplay: {
             delay: 6000,
@@ -93,8 +80,6 @@
 		}
     });
 
-
-    /* Video Lightbox - Magnific Popup */
     $('.popup-youtube, .popup-vimeo').magnificPopup({
         disableOn: 700,
         type: 'iframe',
@@ -126,11 +111,9 @@
         }
     });
 
-
-    /* Details Lightbox - Magnific Popup */
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
-		fixedContentPos: false, /* keep it false to avoid html tag shift with margin-right: 17px */
+		fixedContentPos: false, 
 		fixedBgPos: true,
 		overflowY: 'auto',
 		closeBtnInside: true,
@@ -139,10 +122,7 @@
 		removalDelay: 300,
 		mainClass: 'my-mfp-slide-bottom'
 	});
-    
-    
-    /* Move Form Fields Label When User Types */
-    // for input and textarea fields
+
     $("input, textarea").keyup(function(){
 		if ($(this).val() != '') {
 			$(this).addClass('notEmpty');
@@ -151,22 +131,17 @@
 		}
     });
 
-
-    /* Sign Up Form */
     $("#signUpForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
             sformError();
             ssubmitMSG(false, "Please fill all fields!");
         } else {
-            // everything looks good!
             event.preventDefault();
             ssubmitForm();
         }
     });
 
     function ssubmitForm() {
-        // initiate variables with form content
 		var email = $("#semail").val();
 		var name = $("#sname").val();
 		var password = $("#spassword").val();
@@ -190,7 +165,7 @@
     function sformSuccess() {
         $("#signUpForm")[0].reset();
         ssubmitMSG(true, "Sign Up Submitted!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
+        $("input").removeClass('notEmpty'); 
     }
 
     function sformError() {
@@ -208,22 +183,17 @@
         $("#smsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
 
-
-    /* Log In Form */
     $("#logInForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
             lformError();
             lsubmitMSG(false, "Please fill all fields!");
         } else {
-            // everything looks good!
             event.preventDefault();
             lsubmitForm();
         }
     });
 
     function lsubmitForm() {
-        // initiate variables with form content
 		var email = $("#lemail").val();
 		var password = $("#lpassword").val();
         
@@ -245,7 +215,7 @@
     function lformSuccess() {
         $("#logInForm")[0].reset();
         lsubmitMSG(true, "Log In Submitted!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
+        $("input").removeClass('notEmpty');
     }
 
     function lformError() {
@@ -263,22 +233,17 @@
         $("#lmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
 
-
-    /* Newsletter Form */
     $("#newsletterForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
             nformError();
             nsubmitMSG(false, "Please fill all fields!");
         } else {
-            // everything looks good!
             event.preventDefault();
             nsubmitForm();
         }
     });
 
     function nsubmitForm() {
-        // initiate variables with form content
 		var email = $("#nemail").val();
         var terms = $("#nterms").val();
         $.ajax({
@@ -299,7 +264,7 @@
     function nformSuccess() {
         $("#newsletterForm")[0].reset();
         nsubmitMSG(true, "Subscribed!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
+        $("input").removeClass('notEmpty'); 
     }
 
     function nformError() {
@@ -316,23 +281,18 @@
         }
         $("#nmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
-    
 
-    /* Privacy Form */
     $("#privacyForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
             pformError();
             psubmitMSG(false, "Please fill all fields!");
         } else {
-            // everything looks good!
             event.preventDefault();
             psubmitForm();
         }
     });
 
     function psubmitForm() {
-        // initiate variables with form content
 		var name = $("#pname").val();
 		var email = $("#pemail").val();
         var select = $("#pselect").val();
@@ -356,7 +316,7 @@
     function pformSuccess() {
         $("#privacyForm")[0].reset();
         psubmitMSG(true, "Request Submitted!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
+        $("input").removeClass('notEmpty'); 
     }
 
     function pformError() {
@@ -374,9 +334,6 @@
         $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
     
-
-    /* Back To Top Button */
-    // create the back to top button
     $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');
     var amountScrolled = 700;
     $(window).scroll(function() {
@@ -387,8 +344,6 @@
         }
     });
 
-
-	/* Removes Long Focus On Buttons */
 	$(".button, a, button").mouseup(function() {
 		$(this).blur();
     });
@@ -484,15 +439,10 @@
 
     window.addEventListener("DOMContentLoaded", function() {
 
-    //     // get the form elements defined in your form HTML above
-        
         var form = document.getElementById("forms");
 
-    //     // var button = document.getElementById("my-form-button");
         var status = document.getElementById("status");
     
-    //     // Success and Error functions for after the form is submitted
-        
         function success() {
             form.reset();
             status.classList.add('success');
@@ -504,7 +454,6 @@
             status.innerHTML = "Oops! There was a problem.";
         }
     
-    //     // handle the form submission event
     
         form.addEventListener("submit", function(ev) {
             ev.preventDefault();
@@ -513,8 +462,6 @@
         });
     });
     
-
-    //   // helper function for sending an AJAX request
     
         function ajax(method, url, data, success, error) {
         var xhr = new XMLHttpRequest();
